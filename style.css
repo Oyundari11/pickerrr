@@ -1,0 +1,143 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --yellow: #f2e313;
+  --orange: #f2ce16;
+  --purple: #b200ae;
+  --green: #3bb200;
+  --turkey: #54c4cc;
+  --blue: #0d518c;
+  --grey: #68869e;
+
+  --pink: #f9c8d4;
+  --beige: #f5e8d3;
+  --navy: #1a2f4b;
+  --mint: #a6f0d1;
+  --smoky-grey: #4a5568; 
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--black);
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80dvw;
+  margin: auto;
+}
+
+
+
+/* input */
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50dvw;
+}
+
+#questionInput {
+  width: 100%;
+}
+
+input:not(#questionInput) {
+  width: auto;
+}
+
+input, button {
+  padding: 0.5rem 1rem;
+  border: 0.5px solid var(--white);
+  background: transparent;
+  color: var(--white);
+}
+
+button {
+  cursor: pointer;
+}
+
+
+
+/* wheel */
+
+.wheel-container {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.pointer {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 16px;
+  background: #fff;
+  z-index: 10;
+}
+
+#wheel {
+  width: 50dvw;
+  height: 50dvw;
+  border-radius: 50%;
+  border: 0.5px solid var(--white);
+  position: relative;
+  transition: transform 4s ease-out;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.slice {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: 100% 100%;
+  clip-path: polygon(0 0, 78% 0, 100% 99.5%);
+  background: var(--black);
+}
+
+.slice span {
+  color: #fff; /* White text so it's visible on black slice */
+  font-size: 0.8rem;
+  transform-origin: center;
+  pointer-events: none;
+  position: absolute;
+  top: 25%;
+  left: 56%;
+}
+
+/* result */
+
+.result-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.result-box {
+  background: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.result-box button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+}

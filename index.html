@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Picker Wheel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input-container">
+      <input type="text" id="questionInput" placeholder="Type your question..." />
+      <input type="text" id="option1" placeholder="Option 1" />
+      <input type="text" id="option2" placeholder="Option 2" />
+      <input type="text" id="option3" placeholder="Option 3" />
+
+      <label>
+        <input type="checkbox" id="toggleText" checked />
+        Show slice text on wheel
+      </label>
+    </div>
+    
+    <button id="spinBtn">SPIN</button>
+    
+    <div class="wheel-container">
+      <div class="pointer"></div>
+      <div class="wheel" id="wheel"></div>
+    </div>
+  </div>
+
+  <div class="result-overlay" id="resultOverlay">
+    <div class="result-box">
+      <p id="questionText"></p>
+      <p id="resultText"></p>
+      <button id="closeBtn">CLOSE</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
