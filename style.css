@@ -84,8 +84,8 @@ button {
 }
 
 #wheel {
-  width: 50dvw;
-  height: 50dvw;
+  width: 35dvw;
+  height: 35dvw;
   border-radius: 50%;
   border: 0.5px solid var(--white);
   position: relative;
